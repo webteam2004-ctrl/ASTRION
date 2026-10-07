@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import MissionSection from './components/MissionSection';
@@ -105,6 +106,9 @@ export default function App() {
         pass={verifiedPass}
         onClose={() => setVerifiedPass(null)}
       />
+
+      {/* VERCEL WEB ANALYTICS */}
+      <Analytics />
 
     </div>
   );
